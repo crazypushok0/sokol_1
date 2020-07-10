@@ -1,0 +1,29 @@
+$color-text: #556680;
+%roboto-mono-regular {
+	font-family: "Roboto Mono", monospace;
+	font-weight: 400;
+}
+%roboto-mono-bold {
+	font-family: "Roboto Mono", monospace;
+	font-weight: 700;
+}
+%sans-narrow-regular {
+	font-family: "PT Sans Narrow", sans-serif;
+	font-weight: 400;
+}
+%sans-narrow-bold {
+	font-family: "PT Sans Narrow", sans-serif;
+	font-weight: 700;
+}
+%btn {
+	width: 280px;
+	background-color: #ff7300;
+	height: 60px;
+	color: #fff;
+	line-height: 24px;
+	@extend %roboto-mono-bold;
+	text-transform: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
