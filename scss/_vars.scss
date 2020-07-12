@@ -1,4 +1,6 @@
 $color-text: #556680;
+$color-green: #00760c;
+$color-green-light: #039812;
 %roboto-mono-regular {
 	font-family: "Roboto Mono", monospace;
 	font-weight: 400;
@@ -26,4 +28,5 @@ $color-text: #556680;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 }

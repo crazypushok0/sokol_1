@@ -53,4 +53,9 @@ img {
 	text-transform: uppercase;
 	letter-spacing: 0.275em;
 	margin-bottom: 50px;
+	position: relative;
+	z-index: 4;
+}
+.slick-slide:focus {
+	outline: none;
 }
