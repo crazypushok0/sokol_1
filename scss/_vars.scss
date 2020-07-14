@@ -30,3 +30,16 @@ $color-green-light: #039812;
 	justify-content: center;
 	cursor: pointer;
 }
+
+%submenu-btn {
+	width: 180px;
+	background-color: #ff7300;
+	height: 30px;
+	color: #fff;
+	line-height: 24px;
+	@extend %roboto-mono-bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
