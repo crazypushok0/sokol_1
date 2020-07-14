@@ -95,4 +95,15 @@ $(function () {
 
 	});
 
+	$('.about-item-tabs .submenu__link').click(function () {
+		$('.about-gallery__items').slick("getSlick").refresh();;
+		$('.about-articles__slider').slick("getSlick").refresh();;
+		let id = $(this).attr('data-id');
+		$('.about-tabs').find('.tab-item-about').removeClass('active-tab');
+		$('.about-item-tabs').find('.submenu__link').removeClass('active');
+		$(this).addClass('active');
+		$('#' + id).addClass('active-tab');
+		return false;
+	});
+
 })

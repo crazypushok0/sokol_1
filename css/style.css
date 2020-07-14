@@ -1144,3 +1144,11 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
+
+.about-tabs .tab-item-about {
+  display: none;
+}
+
+.about-tabs .tab-item-about.active-tab {
+  display: block;
+}

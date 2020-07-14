@@ -854,3 +854,13 @@
 		}
 	}
 }
+
+//tabs
+.about-tabs {
+	.tab-item-about {
+		display: none;
+		&.active-tab {
+			display: block;
+		}
+	}
+}
