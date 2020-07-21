@@ -65,22 +65,35 @@ img {
 	margin-top: 70px;
 	margin-bottom: 50px;
 	&__inner {
-		padding: 0 40px;
+		padding: 0 10px;
 	}
 
 	&__list {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		text-transform: uppercase;
 		letter-spacing: 0.12em;
 	}
-
+	&__item {
+		margin-right: 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
 	&__link {
 		color: $color-text;
 		@extend %roboto-mono-bold;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 24px;
+		width: 180px;
+		height: 30px;
+		cursor: pointer;
 		&.active {
-			@extend %submenu-btn;
+			background-color: #ff7300;
+			color: #fff;
 		}
 	}
 }

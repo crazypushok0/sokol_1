@@ -321,6 +321,7 @@
 		font-size: 14px;
 		line-height: 20px;
 		letter-spacing: 0.12em;
+		margin-top: 15px;
 		text-transform: uppercase;
 		@extend %roboto-mono-bold;
 	}
@@ -454,6 +455,7 @@
 		width: 100%;
 		height: 60px;
 		padding: 0 10px 0 15px;
+		border: 2px solid #0c243e;
 	}
 
 	&__btn {
@@ -518,6 +520,9 @@
 		color: #fff;
 		letter-spacing: -0.03em;
 		line-height: 20px;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&__catalog {
@@ -530,6 +535,9 @@
 
 	&__contacts {
 		width: 290px;
+		address.footer__menu-link:hover {
+			text-decoration: none;
+		}
 	}
 
 	&__police {
@@ -581,8 +589,6 @@
 
 .about-gallery {
 	padding-bottom: 90px;
-	&__inner {
-	}
 
 	&__item {
 		img {
@@ -705,9 +711,6 @@
 .about-articles {
 	padding-bottom: 90px;
 
-	&__inner {
-	}
-
 	&__prev {
 		display: flex;
 		justify-content: space-between;
@@ -729,7 +732,9 @@
 	}
 
 	&__prev-link {
-		@extend %submenu-btn;
+		@extend %btn;
+		width: 180px;
+		height: 30px;
 		text-transform: uppercase;
 		margin-top: 30px;
 	}
