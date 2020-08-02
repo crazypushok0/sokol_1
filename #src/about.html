@@ -1,57 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Сокол 1</title>
-	<link
-		href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
-		rel="stylesheet">
-	<link rel="stylesheet" href="css/slick.css">
-	<link rel="stylesheet" href="css/style.css">
-
-</head>
-
-<body>
-	<header class="header">
-		<div class="container">
-			<div class="header__inner">
-				<div class="header__logo">
-					<img src="img/logo.png" alt="">
-				</div>
-				<a class="header__phone" href="tel:84993506413">
-					8 499 350 64 13
-				</a>
-				<nav class="header__menu">
-					<ul class="header__menu-list">
-						<li class="header__menu-item">
-							<a href="#" class="header__menu-link active">
-								О компании
-							</a>
-						</li>
-						<li class="header__menu-item">
-							<a href="#" class="header__menu-link">
-								Каталог
-							</a>
-						</li>
-						<li class="header__menu-item">
-							<a href="#" class="header__menu-link">
-								Информация
-							</a>
-						</li>
-						<li class="header__menu-item">
-							<a href="#" class="header__menu-link">
-								Контакты
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</header>
-	<section class="submenu about-item-tabs">
-		<div class="container">
+@@include('_head.html')
+@@include('_header.html')
+<section class="about">
+	<div class="container">
+		<div class="submenu about-item-tabs">
 			<div class="submenu__inner">
 				<ul class="submenu__list">
 					<li class="submenu__item">
@@ -87,21 +41,21 @@
 				</ul>
 			</div>
 		</div>
-	</section>
-	<div class="about-tabs">
-		<section id="about-about" class="about-about tab-item-about active-tab">
-			<div class="container">
+		<div class="about-tabs">
+			<div id="about-about" class="about-about tab-item-about active-tab">
 				<h4 class="title">о нас</h4>
 				<div class="about-about__inner">
 					<div class="about-about__text">
 						<p>ООО «Спецресурс» - динамично развивающийся кабельный завод. Основная наша специализация - производство
-							огнестойкого кабеля для систем противопожарной защиты. Также изготавливаем греющий провод (бетон прогрев),
+							огнестойкого кабеля для систем противопожарной защиты. Также изготавливаем греющий провод (бетон
+							прогрев),
 							телефония, видеонаблюдение .</p>
 						<p>Мы собрали команду квалифицированных профессионалов рынка электро-технических
 							товаров для реализации ключевой миссии: спасение жизни людей, за счет изготовления высокотехнологичной и
 							экологичной кабельно-проводниковой продукции, отвечающей всем нормам эксплуатации и безопасности.</p>
 						<p>Основными
-							принципами компании являются: честное ведение бизнеса, индивидуальный подход к каждому клиенту, доступная
+							принципами компании являются: честное ведение бизнеса, индивидуальный подход к каждому клиенту,
+							доступная
 							цена
 							кабеля, контроль каждого этапа производства.</p>
 						<p>Заботясь о качестве выпускаемой продукции, мы закупаем сырье
@@ -113,43 +67,51 @@
 						<img src="img/glav/about.jpg" alt="">
 					</div>
 				</div>
-
 			</div>
-		</section>
-		<section id="about-news" class="about-news tab-item-about">
-			<div class="container">
+			<div id="about-news" class="about-news tab-item-about">
 				<h4 class="title">новости</h4>
 				<div class="about-news__inner">
 					<p>данный раздел находится в разработке.</p>
 				</div>
 			</div>
-		</section>
-		<section id="about-gallery" class="about-gallery tab-item-about">
-			<div class="container">
+			<div id="about-gallery" class="about-gallery tab-item-about">
 				<h4 class="title">Галерея</h4>
 				<div class="about-gallery__inner">
 					<div class="about-gallery__items">
-						<div class="about-gallery__item">
-							<img src="img/glav/slide.jpg" alt="">
+						<div class="about-gallery__items-body _swiper">
+							<div class="about-gallery__item _ibg">
+								<img src="img/glav/slide.jpg" alt="">
+							</div>
+							<div class="about-gallery__item _ibg">
+								<img src="img/glav/slide.jpg" alt="">
+							</div>
+							<div class="about-gallery__item _ibg">
+								<img src="img/glav/slide.jpg" alt="">
+							</div>
+							<div class="about-gallery__item _ibg">
+								<img src="img/glav/slide.jpg" alt="">
+							</div>
+							<div class="about-gallery__item _ibg">
+								<img src="img/glav/slide.jpg" alt="">
+							</div>
 						</div>
-						<div class="about-gallery__item">
-							<img src="img/glav/slide.jpg" alt="">
-						</div>
-						<div class="about-gallery__item">
-							<img src="img/glav/slide.jpg" alt="">
-						</div>
-						<div class="about-gallery__item">
-							<img src="img/glav/slide.jpg" alt="">
-						</div>
-						<div class="about-gallery__item">
-							<img src="img/glav/slide.jpg" alt="">
+						<div class="about-gallery__navigation">
+							<div class="about-gallery__arrows about-gallery__arrow-prev">
+								<svg width="8" height="18" viewBox="0 0 8 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.4 17L1 9L7.4 1" stroke="#000" />
+								</svg>
+							</div>
+							<div class="about-gallery__dots"></div>
+							<div class="about-gallery__arrows about-gallery__arrow-next">
+								<svg width="8" height="18" viewBox="0 0 8 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.399806 0.999999L6.79981 9L0.399804 17" stroke="#000" />
+								</svg>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<section id="about-vacancies" class="about-vacancies tab-item-about">
-			<div class="container">
+			<div id="about-vacancies" class="about-vacancies tab-item-about">
 				<h4 class="title">вакансии</h4>
 				<div class="about-vacancies__inner">
 					<p class="about-vacancies__text">
@@ -160,9 +122,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section id="about-articles" class="about-articles tab-item-about">
-			<div class="container">
+			<div id="about-articles" class="about-articles tab-item-about">
 				<h4 class="title">статьи</h4>
 				<div class="about-articles__inner">
 					<div class="about-articles__prev">
@@ -171,7 +131,8 @@
 								Основные виды медного кабеля и Их применение
 							</div>
 							<p class="about-articles__prev-text">
-								Связавшись с электромонтажом на своем собственном участке или в собственной квартире, можно очень скоро
+								Связавшись с электромонтажом на своем собственном участке или в собственной квартире, можно очень
+								скоро
 								заметить, что кабели и провода, используемые в монтаже – преимущественно медные, реже алюминиевые.
 								используемые в монтаже – преимущественно медные, реже алюминиевые.
 							</p>
@@ -183,40 +144,32 @@
 							<img src="img/about/prev-articles.jpg" alt="">
 						</div>
 					</div>
-					<div class="about-articles__slider">
-						<div>
+					<div class="about-articles__slider slider-about-articles">
+						<div class="slider-about-articles__body _swiper">
 							<a href="#" class="about-articles__slide">
 								<div class="about-articles__slide-bg" style="background-image: url(img/about/slide-1.png);"></div>
 								<div class="about-articles__slide--title">
 									Таблица проводов
 								</div>
 							</a>
-						</div>
-						<div>
 							<a href="#" class="about-articles__slide">
 								<div class="about-articles__slide-bg" style="background-image: url(img/about/slide-2.png);"></div>
 								<div class="about-articles__slide--title">
 									Соответствие аналогов марок кабеля
 								</div>
 							</a>
-						</div>
-						<div>
 							<a href="#" class="about-articles__slide">
 								<div class="about-articles__slide-bg" style="background-image: url(img/about/slide-3.png);"></div>
 								<div class="about-articles__slide--title">
 									Сечение кабеля и диаметр: в чем различие?
 								</div>
 							</a>
-						</div>
-						<div>
 							<a href="#" class="about-articles__slide">
 								<div class="about-articles__slide-bg" style="background-image: url(img/about/slide-4.png);"></div>
 								<div class="about-articles__slide--title">
 									Сечение кабеля и диаметр: в чем различие?
 								</div>
 							</a>
-						</div>
-						<div>
 							<a href="#" class="about-articles__slide">
 								<div class="about-articles__slide-bg" style="background-image: url(img/about/slide-2.png);"></div>
 								<div class="about-articles__slide--title">
@@ -224,180 +177,31 @@
 								</div>
 							</a>
 						</div>
-
+						<div class="slider-about-articles__navigation">
+							<div class="slider-about-articles__arrows slider-about-articles__arrow-prev">
+								<svg width="8" height="18" viewBox="0 0 8 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.4 17L1 9L7.4 1" stroke="#000" />
+								</svg>
+							</div>
+							<div class="slider-about-articles__dots"></div>
+							<div class="slider-about-articles__arrows slider-about-articles__arrow-next">
+								<svg width="8" height="18" viewBox="0 0 8 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.399806 0.999999L6.79981 9L0.399804 17" stroke="#000" />
+								</svg>
+							</div>
+						</div>
 					</div>
-
 					<a href="#" class="about-articles__link"> Посмотреть все статьи</a>
 				</div>
 			</div>
-		</section>
-		<section id="about-partners" class="about-partners tab-item-about">
-			<div class="container">
+			<div id="about-partners" class="about-partners tab-item-about">
 				<h4 class="title">Партнеры</h4>
 				<div class="about-partners__inner">
 					<p>данный раздел находится в разработке.</p>
 				</div>
 			</div>
-		</section>
+		</div>
 	</div>
+</section>
 
-	<section class="request-call">
-		<div class="container">
-			<h4 class="title request-call__title">ЗАКАЗАТЬ ЗВОНОК</h4>
-			<div class="request-call__inner">
-				<form class=request-call__form>
-					<div class="request-call__back">
-						<input class="request-call__name" type="text" placeholder="Ваше имя" required>
-						<input class="request-call__phone" type="tel" placeholder="Номер телефона" required>
-						<button type="button" class="request-call__btn">Заказать обратный звонок</button>
-					</div>
-					<label class="request-call__label">
-						<input class="request-call__check" type="checkbox">
-						<p class="request-call__text">
-							Нажимая на кнопку «Заказать обратный звонок», я даю полное согласие на <a href="#"
-								class="request-call__link">обработку персональных данных</a>,
-							а также подтверждаю, что ознакомлен с <a href="#" class="request-call__link">политикой
-								конфиденциальности</a>
-						</p>
-					</label>
-				</form>
-			</div>
-		</div>
-	</section>
-
-	<footer class="footer">
-		<div class="container">
-			<div class="footer__inner">
-				<div class="footer__item">
-					<div class="footer__item-title">О компании</div>
-					<nav class="footer__menu">
-						<ul class="footer__menu-list">
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">
-									История
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">
-									Новости
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">
-									Галерея
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">
-									Вакансии
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">
-									Статьи
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">
-									Партнеры
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="footer__item footer__catalog">
-					<div class="footer__item-title">Каталог</div>
-					<nav class="footer__menu">
-						<ul class="footer__menu-list">
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">
-									Кабели для систем охранно- пожарной сигнализации
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">
-									Прогревочный кабели
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">
-									Провода телефонные, радиотрансляционные и распределительные
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">
-									Кабели комбинированные для видеонаблюдения
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="footer__item footer__info">
-					<div class="footer__item-title">Информация</div>
-					<nav class="footer__menu">
-						<ul class="footer__menu-list">
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">
-									Требования к контрагентам
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">
-									Условия оплаты
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">
-									Условия хранения
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="#" class="footer__menu-link">
-									Сертификаты
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="footer__item footer__contacts">
-					<div class="footer__item-title">Контакты</div>
-					<nav class="footer__menu">
-						<ul class="footer__menu-list">
-							<li class="footer__menu-item">
-								<a href="tel:74993506413" class="footer__menu-link">
-									+7 (499)350-64-13
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="mailto:info@resurscable.com" class="footer__menu-link">
-									info@resurscable.com
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<address class="footer__menu-link">
-									Офис: Москва г, Скульптора Мухиной ул, дом № 7, эт 1, пом II, ком 5Б
-								</address>
-							</li>
-							<li class="footer__menu-item">
-								<address class="footer__menu-link">
-									Склад: Московская обл., Красногорский район, п. Светлые Горы, вл.29
-								</address>
-							</li>
-							<li class="footer__menu-item">
-								<address class="footer__menu-link">
-									Завод: Республика Мордовия, с.Кемля, ул.Территория Сарансккабель, д.17Г
-								</address>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-			<a href="#" class="footer__police">Политика конфиденциальности и обработки персональных данных</a>
-		</div>
-	</footer>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="js/slick.min.js"></script>
-	<script src="js/script.js"></script>
-</body>
-
-</html>
+@@include('_footer.html')

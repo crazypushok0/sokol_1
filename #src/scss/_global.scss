@@ -40,6 +40,7 @@ h6 {
 img {
 	display: block;
 	width: 100%;
+	// max-width: 100%;
 }
 
 .container {
@@ -59,6 +60,42 @@ img {
 }
 .slick-slide:focus {
 	outline: none;
+}
+.header {
+	margin-top: 15px;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__phone {
+		color: $color-text;
+		font-size: 18px;
+	}
+
+	&__menu-list {
+		display: flex;
+		align-items: center;
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+	}
+
+	&__menu-item {
+		margin-left: 59px;
+	}
+
+	&__menu-link {
+		@extend %roboto-mono-bold;
+		color: $color-text;
+		border-bottom: 1px solid transparent;
+		transition: all 0.3s;
+		&.active,
+		&:hover {
+			border-bottom: 1px solid $color-text;
+		}
+	}
 }
 
 .submenu {
@@ -91,9 +128,99 @@ img {
 		width: 180px;
 		height: 30px;
 		cursor: pointer;
+		transition: all 0.2s;
+		&:hover {
+			background-color: #ff7300;
+			color: #fff;
+		}
 		&.active {
 			background-color: #ff7300;
 			color: #fff;
 		}
 	}
+}
+
+.breadcrumbs {
+	padding: 20px 0 40px;
+	overflow-x: auto;
+	&__list {
+		li {
+			display: inline-block;
+			a {
+				color: $color-green;
+			}
+			span {
+				color: $color-text;
+			}
+		}
+		li + li {
+			&::before {
+				content: "»";
+				margin-right: 8px;
+			}
+		}
+	}
+}
+
+.pagination {
+	margin-top: 30px;
+
+	&__list {
+		display: flex;
+		li + li {
+			margin-left: 6px;
+		}
+		a,
+		span {
+			width: 43px;
+			height: 38px;
+			background-color: #fff;
+			display: flex;
+			border: 1px solid $color-text;
+			justify-content: center;
+			align-items: center;
+			color: $color-text;
+			transition: all 0.3s;
+			border-radius: 3px;
+			&.active {
+				background-color: $color-orange;
+				color: #fff;
+				border: none;
+			}
+		}
+		a {
+			&:hover {
+				background-color: $color-orange;
+				color: #fff;
+				border: none;
+			}
+		}
+	}
+}
+
+.swiper-wrapper {
+	position: relative;
+	width: 100%;
+	// height: 100%;
+	z-index: 1;
+	display: flex;
+	transition-property: transform;
+	box-sizing: content-box;
+}
+
+._ibg {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+._ibg img {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
 }
