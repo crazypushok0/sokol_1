@@ -1,0 +1,125 @@
+//subcatalog
+.subcatalog {
+	padding: 20px 0 90px;
+	&__title {
+		text-align: center;
+		font-size: 36px;
+		line-height: 42px;
+		text-transform: uppercase;
+	}
+	&__row {
+		display: flex;
+		margin-top: 40px;
+	}
+	&__seria {
+		min-width: 300px;
+	}
+	&__content {
+		margin-left: 30px;
+	}
+}
+.seria-subcatalog {
+	&__sidebar {
+		background-color: #ffffff;
+		padding: 0px 20px 26px;
+		border: 3px solid $color-orange;
+		margin-bottom: 30px;
+		width: 100%;
+	}
+
+	&__title {
+		font-size: 20px;
+		padding: 26px 0 19px;
+		font-weight: 700;
+		border-bottom: 1px solid $color-orange;
+	}
+
+	&__link {
+		color: $color-text;
+		padding: 0 10px 0 18px;
+		position: relative;
+		&::before {
+			content: "»";
+			position: absolute;
+			left: 0;
+			color: $color-green;
+		}
+	}
+
+	&__count {
+		color: rgba($color-text, 0.6);
+		&::after {
+			content: ")";
+		}
+		&::before {
+			content: "(";
+		}
+	}
+
+	&__menu {
+		margin-top: 20px;
+		li {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.content-subcatalog {
+	&__title {
+		font-size: 24px;
+		line-height: 28px;
+	}
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+	}
+
+	&__item {
+		margin: 0 10px 15px;
+		flex: 0 1 30%;
+		border: 1px solid $color-orange;
+		border-radius: 5px;
+		padding: 15px;
+		text-align: center;
+		background-color: #fff;
+	}
+	&__text {
+		margin-top: 50px;
+		ul {
+			padding-left: 40px;
+		}
+		li {
+			list-style: disc;
+		}
+		h3 {
+			margin: 15px 0;
+		}
+	}
+}
+.item-subcatalog {
+	&__title {
+		text-transform: uppercase;
+		font-weight: 600;
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+	img {
+		width: 70px;
+		margin: 0 auto;
+	}
+	&__excerpt {
+		font-size: 14px;
+	}
+	&__more {
+		@extend %btn;
+		width: 100%;
+		height: 40px;
+	}
+}

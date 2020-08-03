@@ -1,0 +1,142 @@
+//catalog
+.catalog {
+	padding: 20px 0 90px;
+	&__download {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__price {
+		@extend %btn;
+		font-weight: 400;
+		height: 40px;
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+		font-size: 12px;
+	}
+
+	&__tabs {
+		margin-top: 40px;
+	}
+}
+
+.tabs-catalog {
+	&__header {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+		li {
+			padding: 0 10px 10px;
+		}
+	}
+
+	&__item {
+		width: 175px;
+		overflow: hidden;
+		text-align: center;
+		position: relative;
+		transition: all 0.3s;
+		border-radius: 10px;
+		&.active,
+		&:hover {
+			border: 3px solid #ff7300;
+		}
+		&::before {
+			content: "";
+			transition: all 0.3s;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(#000, 0.5);
+			display: block;
+			position: absolute;
+		}
+		span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 1;
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: -0.2px;
+			@extend %roboto-mono-bold;
+		}
+		img {
+			object-fit: cover;
+		}
+	}
+
+	&__body {
+		margin-top: 40px;
+	}
+
+	&__content {
+		display: none;
+		&.active {
+			display: flex;
+		}
+	}
+	&__subheader {
+		flex: 0 1 40%;
+		border-right: 1px solid rgba(#000, 0.4);
+	}
+
+	&__subbody {
+		flex: 0 1 60%;
+	}
+}
+.subheader-tabs-catalog {
+	&__item {
+		text-transform: uppercase;
+		color: $color-text;
+		font-weight: 700;
+		margin-bottom: 15px;
+		transition: all 0.3s color;
+		font-size: 20px;
+		&.active,
+		&:hover {
+			color: $color-orange;
+		}
+	}
+}
+.subbody-tabs-catalog {
+	&__content {
+		padding: 0 15px 0 25px;
+		display: none;
+		&.active {
+			display: flex;
+		}
+	}
+
+	&__column {
+		flex: 0 1 33.333%;
+		margin-right: 15px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		display: block;
+		width: fit-content;
+		color: $color-text;
+		margin-bottom: 10px;
+		// padding-bottom: 2px;
+		border-bottom: 1px solid transparent;
+		transition: all 0.3s;
+		&:hover {
+			border-bottom: 1px solid $color-text;
+		}
+	}
+
+	&__seria {
+		text-align: center;
+		text-transform: uppercase;
+		color: $color-green;
+		font-weight: 700;
+		letter-spacing: 0.125em;
+		font-size: 18px;
+	}
+}

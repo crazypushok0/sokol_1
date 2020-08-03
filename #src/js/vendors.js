@@ -1,0 +1,1 @@
+@@include('_swiper-bundle.js', {})

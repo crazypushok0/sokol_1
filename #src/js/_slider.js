@@ -69,6 +69,51 @@ if (document.querySelector('.sale-slider__items')) {
 
 };
 
+//TrustSlider
+
+if (document.querySelector('.trust__items')) {
+	let sliderTrust = new Swiper('.trust__items-body', {
+		// effect: 'fade',
+		// autoplay:{
+		// 	delay: 3000,
+		// 	disableOnInteraction:false,
+		// },
+		observer: true,
+		observerParents: true,
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		centeredSlides: true,
+		autoHeight: true,
+		speed: 800,
+		// touchRatio: 0,
+		simulateTouch: false,
+		// loop: true,
+		// preloadImages: false,
+		// lazy: true,
+		//Dots
+		pagination: {
+			el: '.trust__items-dots',
+			type: 'fraction',
+			clickable: true,
+		},
+		//Arrows
+		navigation: {
+			nextEl: '.trust__items-arrows.trust__items-arrow-next',
+			prevEl: '.trust__items-arrows.trust__items-arrow-prev',
+		},
+		// on:{
+		// 	lazyImageReady: function(){
+		// 		ibg();
+		// 	},
+		// },
+		//And if we need scrollbar
+		// scrollbar:{
+		// 	el:'.swiper-scrollbar',
+		// },
+	});
+
+};
+
 //SliderArticles
 
 function slideraAboutArticles() {
