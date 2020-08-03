@@ -224,3 +224,9 @@ img {
 	opacity: 0;
 	visibility: hidden;
 }
+._tabs-block {
+	display: none;
+}
+._tabs-block._active {
+	display: block;
+}
