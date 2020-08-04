@@ -1,48 +1,3 @@
-document.querySelectorAll(".about").forEach((tab) => {
-
-	let tabHeading = tab.querySelectorAll(".submenu__link");
-	let tabContent = tab.querySelectorAll(".tab-item-about");
-	let tabName;
-	tabHeading.forEach((element) => {
-
-		element.addEventListener("click", (event) => {
-			event.preventDefault();
-			slideraAboutArticles();
-			tabHeading.forEach((item) => {
-				item.classList.remove("active");
-			});
-			element.classList.add("active");
-			tabName = element.getAttribute("data-id");
-			tabContent.forEach((item) => {
-				item.id === tabName
-					? item.classList.add("active-tab")
-					: item.classList.remove("active-tab");
-
-			});
-		});
-	});
-});
-
-document.querySelectorAll(".tabs-catalog").forEach((tab) => {
-	let tabHeading = tab.querySelectorAll(".tabs-catalog__item");
-	let tabContent = tab.querySelectorAll(".tabs-catalog__content");
-	let tabName;
-	tabHeading.forEach((element) => {
-		element.addEventListener("click", (event) => {
-			event.preventDefault();
-			tabHeading.forEach((item) => {
-				item.classList.remove("active");
-			});
-			element.classList.add("active");
-			tabName = element.getAttribute("data-tabs-item");
-			tabContent.forEach((item) => {
-				item.id === tabName
-					? item.classList.add("active")
-					: item.classList.remove("active");
-			});
-		});
-	});
-});
 
 document.querySelectorAll(".tabs-catalog__content").forEach((subtab) => {
 	let tabHeading = subtab.querySelectorAll(".subheader-tabs-catalog__item");
@@ -73,6 +28,7 @@ for (let index = 0; index < tabs.length; index++) {
 	for (let index = 0; index < tabs_items.length; index++) {
 		let tabs_item = tabs_items[index];
 		tabs_item.addEventListener("click", function (e) {
+			slideraAboutArticles();
 			for (let index = 0; index < tabs_items.length; index++) {
 				let tabs_item = tabs_items[index];
 				tabs_item.classList.remove('_active');
@@ -83,4 +39,4 @@ for (let index = 0; index < tabs.length; index++) {
 			e.preventDefault();
 		});
 	}
-}
+};

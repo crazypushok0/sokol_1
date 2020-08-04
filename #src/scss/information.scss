@@ -1,0 +1,47 @@
+.information {
+	padding: 70px 0 90px;
+	&__content {
+	}
+}
+.content-information {
+	&__nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__item {
+		@extend %btn;
+		text-transform: uppercase;
+		cursor: pointer;
+		height: 30px;
+		background-color: transparent;
+		color: $color-text;
+		// margin-right: 10px;
+		transition: all 0.3s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover,
+		&._active {
+			background-color: $color-orange;
+			color: #fff;
+		}
+	}
+
+	&__body {
+		margin-top: 50px;
+	}
+}
+
+.block-content-information {
+	&__text {
+		max-width: 780px;
+		li {
+			list-style: inherit;
+		}
+	}
+}

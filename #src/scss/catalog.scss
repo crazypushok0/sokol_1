@@ -37,7 +37,7 @@
 		position: relative;
 		transition: all 0.3s;
 		border-radius: 10px;
-		&.active,
+		&._active,
 		&:hover {
 			border: 3px solid #ff7300;
 		}
@@ -73,8 +73,10 @@
 	}
 
 	&__content {
-		display: none;
-		&.active {
+		&._tabs-block {
+			display: none;
+		}
+		&._active {
 			display: flex;
 		}
 	}
