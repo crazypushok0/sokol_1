@@ -65,13 +65,17 @@ img {
 
 .title {
 	@extend %sans-narrow-regular;
-	font-size: 38px;
+	@include adaptiv-font(38, 26);
+	// font-size: 38px;
 	text-transform: uppercase;
 	letter-spacing: 0.275em;
 	margin-bottom: 50px;
 	position: relative;
 	// z-index: 4;
 	line-height: 40px;
+	@media (max-width: 410px) {
+		margin-bottom: 30px;
+	}
 }
 .slick-slide:focus {
 	outline: none;
@@ -105,12 +109,19 @@ img {
 		align-items: center;
 		text-transform: uppercase;
 		letter-spacing: 0.12em;
+		@media (max-width: 991.98px) {
+			flex-direction: column;
+		}
 	}
 
 	&__menu-item {
 		margin-left: 59px;
 		@media (max-width: 1150px) {
 			margin-left: 30px;
+		}
+		@media (max-width: 991.98px) {
+			margin-left: 0;
+			margin-bottom: 30px;
 		}
 	}
 
