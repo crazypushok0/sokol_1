@@ -5,16 +5,25 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		position: relative;
+		@media (max-width: 840px) {
+			justify-content: center;
+		}
 	}
 
 	&__box {
 		text-transform: uppercase;
+		@media (max-width: 800px) {
+			text-align: center;
+		}
 	}
 
 	&__title {
 		color: #4c75b2;
+		white-space: nowrap;
 		@extend %sans-narrow-bold;
-		font-size: 72px;
+		@include adaptiv-font(72, 57);
+		line-height: 1.1;
 		letter-spacing: 0.275em;
 	}
 
@@ -24,11 +33,16 @@
 		align-items: center;
 		margin-bottom: 60px;
 		margin-right: 5px;
+		@media (max-width: 410px) {
+			flex-direction: column;
+			margin: 40px 0;
+		}
 	}
 
 	&__percent {
 		@extend %sans-narrow-regular;
 		font-size: 72px;
+		line-height: 74px;
 		letter-spacing: 0.275em;
 	}
 
@@ -46,6 +60,9 @@
 
 	&__btn {
 		@extend %btn;
+		@media (max-width: 800px) {
+			margin: 0 auto;
+		}
 	}
 
 	&__img {
@@ -63,25 +80,52 @@
 		img {
 			max-width: 782px;
 		}
+		@media (max-width: 991.98px) {
+			&::before {
+				display: none;
+			}
+		}
+		@media (max-width: 800px) {
+			img {
+				display: none;
+			}
+		}
 	}
 }
 
 .products {
 	margin-top: 190px;
+	@media (max-width: 991.98px) {
+		margin-top: 58px;
+	}
 	&__inner {
 		display: flex;
 		flex-direction: column;
 	}
 
 	&__items {
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		// grid-template-rows: repeat(2, 400px);
+		gap: 10px;
+		// display: flex;
+		// justify-content: center;
 		align-items: center;
-		margin-bottom: 50px;
+		// flex-wrap: wrap;
+		margin: 0 0 50px;
+		@media (max-width: 877px) {
+			grid-template-columns: repeat(2, 1fr);
+			// grid-template-rows: repeat(3, 400px);
+		}
+		@media (max-width: 611px) {
+			grid-template-columns: 1fr;
+			// grid-template-rows: repeat(6, 350px);
+		}
 	}
 
 	&__item {
-		width: 280px;
+		// width: 280px;
+		// flex: 1 1 30%;
 		height: 400px;
 		position: relative;
 		display: flex;
@@ -90,6 +134,7 @@
 		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
 		padding: 0 25px 32px;
 		color: #000;
+		// margin: 0 5px 15px;
 	}
 
 	&__bg {
@@ -105,6 +150,7 @@
 	&__item-title {
 		text-transform: uppercase;
 		letter-spacing: 0.12em;
+		// white-space: nowrap;
 	}
 
 	&__btn {
@@ -131,6 +177,7 @@
 		padding: 4px 10px;
 		display: inline-block;
 		margin-bottom: 5px;
+		white-space: nowrap;
 	}
 
 	&__items {

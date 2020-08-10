@@ -40,3 +40,23 @@ for (let index = 0; index < tabs.length; index++) {
 		});
 	}
 };
+
+if (window.innerWidth < 525) {
+	let filterTitles = document.querySelectorAll('.footer__item-title');
+	let filterMenu = document.querySelectorAll('.footer__menu');
+	for (let index = 0; index < filterTitles.length; index++) {
+		let filterTitle = filterTitles[index];
+		filterTitle.addEventListener("click", function (e) {
+			for (let index = 0; index < filterTitles.length; index++) {
+				let filterTitle = filterTitles[index];
+				filterTitle.classList.remove('_active');
+				filterMenu[index].classList.remove('_active');
+			}
+			filterTitle.classList.add('_active');
+			filterMenu[index].classList.add('_active');
+			e.preventDefault();
+		});
+
+	}
+
+}

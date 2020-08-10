@@ -182,13 +182,13 @@ let _slideToggle = (target, duration = 500) => {
 }
 //========================================
 
-if (window.innerWidth < 525) {
-	const filterTitles = document.querySelectorAll('.footer__item-title');
-	for (let index = 0; index < filterTitles.length; index++) {
-		const filterTitle = filterTitles[index];
-		filterTitle.addEventListener("click", function (e) {
-			filterTitle.classList.toggle('_active');
-			_slideToggle(filterTitle.nextElementSibling);
-		});
-	}
-}
+// if (window.innerWidth < 525) {
+// 	const filterTitles = document.querySelectorAll('.footer__item-title');
+// 	for (let index = 0; index < filterTitles.length; index++) {
+// 		const filterTitle = filterTitles[index];
+// 		filterTitle.addEventListener("click", function (e) {
+// 			filterTitle.classList.toggle('_active');
+// 			_slideToggle(filterTitle.nextElementSibling);
+// 		});
+// 	}
+// }
