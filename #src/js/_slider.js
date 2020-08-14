@@ -133,45 +133,7 @@ if (document.querySelector('.partners__inner')) {
 //SliderArticles
 
 function slideraAboutArticles() {
-	let sliderAboutArticles = new Swiper('.slider-about-articles__body', {
-		// effect: 'coverflow',
-		// autoplay:{
-		// 	delay: 3000,
-		// 	disableOnInteraction:false,
-		// },
-		observer: true,
-		observerParents: true,
-		observeSlideChildren: true,
-		slidesPerView: 4,
-		spaceBetween: 0,
-		autoHeight: true,
-		speed: 800,
-		// touchRatio: 0,
-		// simulateTouch: false,
-		// loop: true,
-		// preloadImages: false,
-		// lazy: true,
-		//Dots
-		pagination: {
-			el: '.slider-about-articles__dots',
-			type: 'fraction',
-			clickable: true,
-		},
-		//Arrows
-		navigation: {
-			nextEl: '.slider-about-articles__arrows.slider-about-articles__arrow-next',
-			prevEl: '.slider-about-articles__arrows.slider-about-articles__arrow-prev',
-		},
-		// on:{
-		// 	lazyImageReady: function(){
-		// 		ibg();
-		// 	},
-		// },
-		//And if we need scrollbar
-		// scrollbar:{
-		// 	el:'.swiper-scrollbar',
-		// },
-	});
+
 	let sliderAboutGallery = new Swiper('.about-gallery__items-body', {
 		// effect: 'fade',
 		// autoplay:{

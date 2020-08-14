@@ -1,6 +1,6 @@
 //catalog
 .catalog {
-	padding: 20px 0 90px;
+	padding: 70px 0 90px;
 	&__download {
 		display: flex;
 		justify-content: flex-end;
@@ -27,16 +27,30 @@
 		margin: 0 -10px;
 		li {
 			padding: 0 10px 10px;
+			@media (max-width: 901px) {
+				flex: 0 0 50%;
+				min-width: 0;
+			}
+			@media (max-width: 590px) {
+				flex: 0 0 100%;
+			}
 		}
 	}
 
 	&__item {
-		width: 175px;
+		width: 272px;
+		height: 140px;
 		overflow: hidden;
 		text-align: center;
 		position: relative;
 		transition: all 0.3s;
 		border-radius: 10px;
+		@media (max-width: 901px) {
+			width: 100%;
+		}
+		@media (max-width: 590px) {
+			height: 100px;
+		}
 		&._active,
 		&:hover {
 			border: 3px solid #ff7300;
@@ -61,7 +75,13 @@
 			color: #fff;
 			text-transform: uppercase;
 			letter-spacing: -0.2px;
+			display: block;
 			@extend %roboto-mono-bold;
+			@media (max-width: 590px) {
+				left: 0;
+				transform: translate(0, -50%);
+				right: 0;
+			}
 		}
 		img {
 			object-fit: cover;

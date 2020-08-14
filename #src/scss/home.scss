@@ -274,6 +274,10 @@
 		line-height: 24px;
 		max-width: 585px;
 		margin-right: 10px;
+		@media (max-width: 874px) {
+			max-width: 100%;
+			margin-right: 0;
+		}
 		p {
 			text-indent: 40px;
 			&:first-child {
