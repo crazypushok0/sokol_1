@@ -5,19 +5,147 @@
 		text-align: center;
 		font-size: 36px;
 		line-height: 42px;
+		margin-bottom: 30px;
 		text-transform: uppercase;
 	}
 	&__row {
 		display: flex;
 		margin-top: 40px;
 	}
-	&__seria {
+	&__aside {
 		min-width: 300px;
 	}
 	&__content {
 		margin-left: 30px;
 	}
+	&__menu {
+		background-color: $color-orange;
+		margin-bottom: 30px;
+		position: relative;
+	}
 }
+
+.menu-subcatalog {
+	&__header {
+		display: flex;
+		align-items: center;
+		padding: 20px;
+		color: #fff;
+		line-height: 1.2;
+	}
+
+	&__title {
+		flex: 1 1 auto;
+		font-size: 30px;
+		text-transform: uppercase;
+		letter-spacing: 0.75px;
+		font-weight: 700;
+	}
+
+	&__burger {
+		flex: 0 0 36px;
+		width: 36px;
+		height: 36px;
+		background-color: #e66b06;
+		position: relative;
+		cursor: pointer;
+		z-index: 5;
+		padding: 10px 6px;
+		& span {
+			transition: all 0.3s ease 0s;
+			top: calc(50% - 1px);
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+		}
+
+		& span:first-child {
+			top: 0px;
+		}
+
+		& span:last-child {
+			top: auto;
+			bottom: 0px;
+		}
+
+		&._active span {
+			transform: scale(0);
+		}
+
+		&._active span:first-child {
+			transform: rotate(-45deg);
+			top: calc(50% - 1px);
+		}
+
+		&._active span:last-child {
+			transform: rotate(45deg);
+			bottom: calc(50% - 1px);
+		}
+	}
+
+	&__lines {
+		height: 16px;
+		position: relative;
+	}
+
+	&__body {
+	}
+
+	&__list {
+		& > li {
+			border-bottom: 1px solid rgba(#fff, 0.6);
+		}
+		& > li:last-child {
+			border-bottom: 0px;
+		}
+	}
+
+	&__parent {
+	}
+
+	&__link {
+		position: relative;
+		padding: 12px 20px;
+		letter-spacing: 0.3px;
+		color: #fff;
+		display: block;
+		&::after {
+			content: "";
+			position: absolute;
+			transition: all 0.3s ease 0s;
+			right: 10px;
+			width: 14px;
+			height: 14px;
+			top: 50%;
+			transform: translateY(-50%);
+			background: url(../img/icons/menu_arrow.png) 0 0 no-repeat;
+		}
+		&:hover {
+			background-color: #e66b06;
+		}
+	}
+
+	&__submenu {
+	}
+}
+
+.submenu-subcatalog {
+	&__menu {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		height: 100%;
+		overflow: hidden;
+		pointer-events: none;
+	}
+
+	&__link {
+	}
+}
+
 .seria-subcatalog {
 	&__sidebar {
 		background-color: #ffffff;
