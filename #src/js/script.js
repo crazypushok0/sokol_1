@@ -182,13 +182,47 @@ let _slideToggle = (target, duration = 500) => {
 }
 //========================================
 
-// if (window.innerWidth < 525) {
-// 	const filterTitles = document.querySelectorAll('.footer__item-title');
-// 	for (let index = 0; index < filterTitles.length; index++) {
-// 		const filterTitle = filterTitles[index];
-// 		filterTitle.addEventListener("click", function (e) {
-// 			filterTitle.classList.toggle('_active');
-// 			_slideToggle(filterTitle.nextElementSibling);
-// 		});
-// 	}
-// }
+if (isMobile.any()) {
+	let menuParents = document.querySelectorAll('.menu-subcatalog__parent>a');
+	for (let index = 0; index < menuParents.length; index++) {
+		const menuParent = menuParents[index];
+		menuParent.addEventListener("click", function (e) {
+			menuParent.parentElement.classList.toggle('_active');
+			e.preventDefault();
+		});
+	}
+} else {
+	let menuParents = document.querySelectorAll('.menu-subcatalog__parent');
+	for (let index = 0; index < menuParents.length; index++) {
+		const menuParent = menuParents[index];
+		menuParent.addEventListener("mouseenter", function (e) {
+			menuParent.classList.add('_active');
+			e.preventDefault();
+		});
+		menuParent.addEventListener("mouseleave", function (e) {
+			menuParent.classList.remove('_active');
+			e.preventDefault();
+		});
+	}
+}
+
+
+let submenuParents = document.querySelectorAll('.submenu-subcatalog__parent>a');
+for (let index = 0; index < submenuParents.length; index++) {
+	let submenuParent = submenuParents[index];
+	submenuParent.addEventListener("click", function (e) {
+		for (let index = 0; index < submenuParents.length; index++) {
+			let submenuParent = submenuParents[index];
+			submenuParent.parentElement.classList.remove('_active');
+		}
+		submenuParent.parentElement.classList.add('_active');
+		e.preventDefault();
+	});
+}
+
+let menuPageBurger = document.querySelector('.menu-subcatalog__burger');
+let menuPageBody = document.querySelector('.menu-subcatalog__body');
+menuPageBurger.addEventListener("click", function (e) {
+	menuPageBurger.classList.toggle('_active');
+	_slideToggle(menuPageBody);
+});
