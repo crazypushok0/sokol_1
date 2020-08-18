@@ -1,24 +1,4 @@
 
-document.querySelectorAll(".tabs-catalog__content").forEach((subtab) => {
-	let tabHeading = subtab.querySelectorAll(".subheader-tabs-catalog__item");
-	let tabContent = subtab.querySelectorAll(".subbody-tabs-catalog__content");
-	let tabName;
-	tabHeading.forEach((element) => {
-		element.addEventListener("click", (event) => {
-			event.preventDefault();
-			tabHeading.forEach((item) => {
-				item.classList.remove("active");
-			});
-			element.classList.add("active");
-			tabName = element.getAttribute("data-tabs-subbody");
-			tabContent.forEach((item) => {
-				item.id === tabName
-					? item.classList.add("active")
-					: item.classList.remove("active");
-			});
-		});
-	});
-});
 
 let tabs = document.querySelectorAll("._tabs");
 for (let index = 0; index < tabs.length; index++) {

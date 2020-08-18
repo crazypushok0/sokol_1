@@ -1,3 +1,5 @@
+
+
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
@@ -182,8 +184,9 @@ let _slideToggle = (target, duration = 500) => {
 }
 //========================================
 
+
 if (isMobile.any()) {
-	let menuParents = document.querySelectorAll('.menu-subcatalog__parent>a');
+	let menuParents = document.querySelectorAll('.menu-catalog__parent>a');
 	for (let index = 0; index < menuParents.length; index++) {
 		const menuParent = menuParents[index];
 		menuParent.addEventListener("click", function (e) {
@@ -192,7 +195,7 @@ if (isMobile.any()) {
 		});
 	}
 } else {
-	let menuParents = document.querySelectorAll('.menu-subcatalog__parent');
+	let menuParents = document.querySelectorAll('.menu-catalog__parent');
 	for (let index = 0; index < menuParents.length; index++) {
 		const menuParent = menuParents[index];
 		menuParent.addEventListener("mouseenter", function (e) {
@@ -207,7 +210,7 @@ if (isMobile.any()) {
 }
 
 
-let submenuParents = document.querySelectorAll('.submenu-subcatalog__parent>a');
+let submenuParents = document.querySelectorAll('.submenu-catalog__parent>a');
 for (let index = 0; index < submenuParents.length; index++) {
 	let submenuParent = submenuParents[index];
 	submenuParent.addEventListener("click", function (e) {
@@ -220,9 +223,12 @@ for (let index = 0; index < submenuParents.length; index++) {
 	});
 }
 
-let menuPageBurger = document.querySelector('.menu-subcatalog__burger');
-let menuPageBody = document.querySelector('.menu-subcatalog__body');
-menuPageBurger.addEventListener("click", function (e) {
-	menuPageBurger.classList.toggle('_active');
-	_slideToggle(menuPageBody);
-});
+let menuCatalogBurger = document.querySelector('.menu-catalog__burger');
+let menuCatalogBody = document.querySelector('.menu-catalog__body');
+if (menuCatalogBurger) {
+	menuCatalogBurger.addEventListener("click", function (e) {
+		menuCatalogBurger.classList.toggle('_active');
+		_slideToggle(menuCatalogBody);
+		e.preventDefault();
+	});
+};

@@ -218,7 +218,7 @@ if (document.querySelector('.product__slider')) {
 	let productSliderImages = document.querySelectorAll('.slider-product__item');
 	let productSliderDots = document.querySelectorAll('.product__slider-dots .swiper-pagination-bullet');
 	for (let index = 0; index < productSliderImages.length; index++) {
-		const productSliderImage = productSliderImages[index].style.backgroundImage;
+		let productSliderImage = productSliderImages[index].style.backgroundImage;
 		productSliderDots[index].style.backgroundImage = productSliderImage;
 	}
 };
