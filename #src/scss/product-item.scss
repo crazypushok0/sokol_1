@@ -7,12 +7,18 @@
 
 	&__item {
 		margin: 0 10px 15px;
-		flex: 0 1 30%;
+		flex: 1 1 30%;
 		border: 1px solid $color-orange;
 		border-radius: 5px;
 		padding: 15px;
 		text-align: center;
 		background-color: #fff;
+		@media (max-width: 768px) {
+			flex: 0 0 45%;
+		}
+		@media (max-width: 530px) {
+			flex: 1 1 100%;
+		}
 	}
 }
 .item-product {
@@ -25,6 +31,9 @@
 	img {
 		width: 70px;
 		margin: 0 auto;
+		@media (max-width: 530px) {
+			width: 90px;
+		}
 	}
 	&__excerpt {
 		font-size: 14px;

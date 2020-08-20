@@ -11,31 +11,62 @@
 	&__row {
 		display: flex;
 		margin-top: 40px;
+		@media (max-width: 1100px) {
+			flex-direction: column;
+		}
 	}
 	&__aside {
 		min-width: 300px;
+		@media (max-width: 340px) {
+			min-width: 270px;
+		}
 	}
 	&__content {
 		margin-left: 30px;
+		@media (max-width: 1100px) {
+			margin-left: 0;
+		}
 	}
 }
 
 .seria-subcatalog {
 	&__sidebar {
 		background-color: #ffffff;
-		padding: 0px 20px 26px;
+		padding: 26px 20px 26px;
 		border: 3px solid $color-orange;
 		margin-bottom: 30px;
 		width: 100%;
 		position: sticky;
 		top: 20px;
+		@media (max-width: 1100px) {
+			position: inherit;
+		}
 	}
 
 	&__title {
 		font-size: 20px;
-		padding: 26px 0 19px;
+		padding: 0 0 19px;
 		font-weight: 700;
 		border-bottom: 1px solid $color-orange;
+		text-transform: uppercase;
+		@media (max-width: 1100px) {
+			position: relative;
+			width: fit-content;
+			left: 50%;
+			transform: translateX(-50%);
+			cursor: pointer;
+			border-bottom-width: 0px;
+			padding: 0;
+			transition: all 0.3s ease 0s;
+			&._active {
+				transition: all 0.3s ease 0s;
+				left: 0;
+				transform: translateX(0);
+				width: 100%;
+				border-bottom-width: 1px;
+				padding: 0 0 19px;
+			}
+		}
 	}
 
 	&__link {
@@ -62,6 +93,9 @@
 
 	&__menu {
 		margin-top: 20px;
+		@media (max-width: 1100px) {
+			display: none;
+		}
 		li {
 			display: flex;
 			justify-content: space-between;

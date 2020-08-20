@@ -4,6 +4,9 @@
 	&__download {
 		display: flex;
 		justify-content: flex-end;
+		@media (max-width: 320px) {
+			justify-content: center;
+		}
 	}
 
 	&__price {
@@ -18,6 +21,9 @@
 		display: flex;
 		margin-top: 40px;
 		justify-content: space-between;
+		@media (max-width: 1100px) {
+			flex-direction: column;
+		}
 	}
 	&__menu {
 		background-color: $color-orange;
@@ -26,9 +32,15 @@
 	}
 	&__aside {
 		min-width: 300px;
+		@media (max-width: 340px) {
+			min-width: 270px;
+		}
 	}
 	&__content {
 		margin-left: 30px;
+		@media (max-width: 1100px) {
+			margin-left: 0;
+		}
 	}
 	&__title {
 		text-align: center;
@@ -63,7 +75,7 @@
 		background-color: #e66b06;
 		position: relative;
 		cursor: pointer;
-		z-index: 5;
+		z-index: 1;
 		padding: 10px 6px;
 		& span {
 			transition: all 0.3s ease 0s;
@@ -139,6 +151,11 @@
 			}
 			& .menu-catalog__link {
 				background-color: #e66b06;
+				&::after {
+					@media (max-width: 1100px) {
+						transform: rotate(-90deg);
+					}
+				}
 			}
 		}
 		& .menu-catalog__link {
@@ -149,20 +166,28 @@
 				right: 10px;
 				width: 14px;
 				height: 14px;
-				top: 50%;
-				transform: translateY(-50%);
+				top: calc(50% - 7px);
 				background: url(../img/icons/menu-arrow-w.svg) 0 0 no-repeat;
 				background-size: cover;
+				@media (max-width: 1100px) {
+					transform: rotate(90deg);
+				}
+			}
+		}
+		&:last-child {
+			.submenu-catalog__menu {
+				border-bottom-width: 3px;
 			}
 		}
 	}
 
 	&__link {
 		position: relative;
-		padding: 12px 20px;
+		padding: 12px 28px 12px 20px;
 		letter-spacing: 0.3px;
 		color: #fff;
 		display: block;
+
 		&:hover {
 			background-color: #e66b06;
 		}
@@ -171,18 +196,23 @@
 
 .submenu-catalog {
 	&__menu {
-		@media (min-width: 991.98px) {
-			width: 100%;
-			position: absolute;
-			top: 0;
-			left: 100%;
-			height: 100%;
-			overflow: hidden;
-			pointer-events: none;
-			display: none;
-			border: 3px solid $color-orange;
-			border-left: 0px;
-			background-color: #ffffff;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		height: 100%;
+		overflow: hidden;
+		pointer-events: none;
+		display: none;
+		border: 3px solid $color-orange;
+		border-left-width: 0px;
+		background-color: #ffffff;
+		@media (max-width: 1100px) {
+			position: inherit;
+			max-height: 400px;
+			border-left-width: 3px;
+			border-bottom-width: 0px;
+			border-top-width: 0px;
 		}
 	}
 	&__parent {
