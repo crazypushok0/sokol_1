@@ -5,14 +5,17 @@
 
 	&__title {
 		text-align: center;
-		font-size: 36px;
-		line-height: 42px;
+		@include adaptiv-font(36, 28);
+		line-height: 1.2;
 		text-transform: uppercase;
 	}
 
 	&__row {
 		display: flex;
 		margin-top: 40px;
+		@media (max-width: 991.98px) {
+			flex-direction: column;
+		}
 	}
 
 	&__slider {
@@ -21,6 +24,9 @@
 		padding: 0;
 		z-index: 1;
 		flex: 0 0 40%;
+		@media (max-width: 991.98px) {
+			margin-bottom: 30px;
+		}
 	}
 	&__slider-dots {
 		display: flex;
@@ -29,6 +35,10 @@
 		z-index: 2;
 		justify-content: center;
 		counter-reset: item;
+		margin-top: 15px;
+		@media (max-width: 440px) {
+			justify-content: flex-start;
+		}
 		.swiper-pagination-bullet {
 			cursor: pointer;
 			position: relative;
@@ -42,6 +52,9 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			transition: all 0.3s;
+			@media (max-width: 525px) {
+				margin: 0 8px;
+			}
 			&:focus {
 				outline: none;
 			}
@@ -71,6 +84,9 @@
 
 	&__description {
 		margin-left: 30px;
+		@media (max-width: 991.98px) {
+			margin-left: 0;
+		}
 	}
 }
 .slider-product {
@@ -81,6 +97,16 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center / 100%;
+		@media (max-width: 991.98px) {
+			background-size: contain;
+			background-position: center;
+		}
+		@media (max-width: 525px) {
+			height: 400px;
+		}
+		@media (max-width: 440px) {
+			height: 340px;
+		}
 	}
 }
 
@@ -91,19 +117,10 @@
 	li {
 		list-style: disc;
 	}
-	&__more {
-		margin-top: 30px;
-	}
-
-	&__link {
-		display: block;
-		width: fit-content;
-		color: $color-orange;
-		text-decoration: underline;
-	}
 
 	&__btn {
 		margin-top: 30px;
 		@extend %btn;
+		width: 275px;
 	}
 }

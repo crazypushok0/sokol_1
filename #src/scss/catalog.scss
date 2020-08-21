@@ -44,8 +44,8 @@
 	}
 	&__title {
 		text-align: center;
-		font-size: 36px;
-		line-height: 42px;
+		@include adaptiv-font(36, 28);
+		line-height: 1.2;
 		margin-bottom: 30px;
 		text-transform: uppercase;
 	}
