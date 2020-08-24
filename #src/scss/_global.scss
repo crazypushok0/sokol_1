@@ -77,7 +77,7 @@ img {
 
 .title {
 	@extend %sans-narrow-regular;
-	@include adaptiv-font(38, 26);
+	@include adaptiv-font(38, 20);
 	// font-size: 38px;
 	text-transform: uppercase;
 	letter-spacing: 0.275em;
