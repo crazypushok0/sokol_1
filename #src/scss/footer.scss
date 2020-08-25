@@ -135,19 +135,18 @@
 
 	&__menu-item {
 		margin-bottom: 21px;
+		a {
+			font-style: normal;
+			color: #fff;
+			letter-spacing: -0.03em;
+			line-height: 20px;
+			text-transform: lowercase;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 		@media (max-width: 524px) {
 			margin-bottom: 15px;
-		}
-	}
-
-	&__menu-link {
-		font-style: normal;
-		color: #fff;
-		letter-spacing: -0.03em;
-		line-height: 20px;
-		text-transform: lowercase;
-		&:hover {
-			text-decoration: underline;
 		}
 	}
 
@@ -161,7 +160,7 @@
 
 	&__contacts {
 		width: 290px;
-		address.footer__menu-link:hover {
+		address:hover {
 			text-decoration: none;
 		}
 	}

@@ -132,23 +132,24 @@ img {
 
 	&__menu-item {
 		margin-left: 59px;
+		a {
+			@extend %roboto-mono-bold;
+			color: $color-text;
+			border-bottom: 1px solid transparent;
+			transition: all 0.3s;
+		}
+		&.active,
+		&:hover {
+			a {
+				border-bottom: 1px solid $color-text;
+			}
+		}
 		@media (max-width: 1150px) {
 			margin-left: 30px;
 		}
 		@media (max-width: 991.98px) {
 			margin-left: 0;
 			margin-bottom: 30px;
-		}
-	}
-
-	&__menu-link {
-		@extend %roboto-mono-bold;
-		color: $color-text;
-		border-bottom: 1px solid transparent;
-		transition: all 0.3s;
-		&.active,
-		&:hover {
-			border-bottom: 1px solid $color-text;
 		}
 	}
 }
