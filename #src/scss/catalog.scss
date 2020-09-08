@@ -1,6 +1,9 @@
 //catalog
 .catalog {
-	padding: 70px 0 90px;
+	padding: 40px 0 90px;
+	@media (max-width: 991.98px) {
+		padding: 30px 0;
+	}
 	&__download {
 		display: flex;
 		justify-content: flex-end;
@@ -127,69 +130,65 @@
 		& > li:last-child {
 			border-bottom: 0px;
 		}
-	}
-
-	&__parent {
-		&._active {
-			& .submenu-catalog__menu {
-				pointer-events: all;
-				display: block;
-				overflow-y: auto;
-				&::-webkit-scrollbar {
-					border-radius: 7px;
-					width: 7px;
-					background-color: #f9f9fd;
+		& > li {
+			&._active {
+				& .submenu-catalog__menu {
+					pointer-events: all;
+					display: block;
+					overflow-y: auto;
+					&::-webkit-scrollbar {
+						border-radius: 7px;
+						width: 7px;
+						background-color: #f9f9fd;
+					}
+					&::-webkit-scrollbar-thumb {
+						border-radius: 7px;
+						background-color: $color-text;
+					}
+					&::-webkit-scrollbar-track {
+						border-radius: 7px;
+						background-color: #f9f9fd;
+					}
 				}
-				&::-webkit-scrollbar-thumb {
-					border-radius: 7px;
-					background-color: $color-text;
-				}
-				&::-webkit-scrollbar-track {
-					border-radius: 7px;
-					background-color: #f9f9fd;
-				}
-			}
-			& .menu-catalog__link {
-				background-color: #e66b06;
-				&::after {
-					@media (max-width: 1100px) {
-						transform: rotate(-90deg);
+				& > a {
+					background-color: #e66b06;
+					&::after {
+						@media (max-width: 1100px) {
+							transform: rotate(-90deg);
+						}
 					}
 				}
 			}
-		}
-		& .menu-catalog__link {
-			&::after {
-				content: "";
-				position: absolute;
-				transition: all 0.3s ease 0s;
-				right: 10px;
-				width: 14px;
-				height: 14px;
-				top: calc(50% - 7px);
-				background: url(../img/icons/menu-arrow-w.svg) 0 0 no-repeat;
-				background-size: cover;
-				@media (max-width: 1100px) {
-					transform: rotate(90deg);
+			& > a {
+				position: relative;
+				padding: 12px 28px 12px 20px;
+				letter-spacing: 0.3px;
+				color: #fff;
+				display: block;
+
+				&:hover {
+					background-color: #e66b06;
+				}
+				&::after {
+					content: "";
+					position: absolute;
+					transition: all 0.3s ease 0s;
+					right: 10px;
+					width: 14px;
+					height: 14px;
+					top: calc(50% - 7px);
+					background: url(../img/icons/menu-arrow-w.svg) 0 0 no-repeat;
+					background-size: cover;
+					@media (max-width: 1100px) {
+						transform: rotate(90deg);
+					}
 				}
 			}
-		}
-		&:last-child {
-			.submenu-catalog__menu {
-				border-bottom-width: 3px;
+			&:last-child {
+				.submenu-catalog__menu {
+					border-bottom-width: 3px;
+				}
 			}
-		}
-	}
-
-	&__link {
-		position: relative;
-		padding: 12px 28px 12px 20px;
-		letter-spacing: 0.3px;
-		color: #fff;
-		display: block;
-
-		&:hover {
-			background-color: #e66b06;
 		}
 	}
 }
@@ -214,44 +213,45 @@
 			border-bottom-width: 0px;
 			border-top-width: 0px;
 		}
-	}
-	&__parent {
-		&._active {
-			.submenu-catalog__body {
-				display: block;
+		& > li {
+			&._active {
+				.submenu-catalog__body {
+					display: block;
+				}
+				& > a {
+					&::after {
+						transform: rotate(-90deg);
+					}
+				}
 			}
-			.submenu-catalog__link {
+			& > a {
+				text-transform: uppercase;
+				color: $color-text;
+				border-bottom: 1px solid rgba($color-orange, 0.5);
+				display: block;
+				padding: 12px 20px;
+				letter-spacing: 0.3px;
+				position: relative;
+				&:hover {
+					background-color: rgba($color-orange, 0.3);
+				}
 				&::after {
-					transform: rotate(-90deg);
+					content: "";
+					position: absolute;
+					transition: all 0.3s ease 0s;
+					right: 10px;
+					width: 14px;
+					height: 14px;
+					top: calc(50% - 7px);
+					transform: rotate(90deg);
+					background: url(../img/icons/menu-arrow.svg) 0 0 no-repeat;
+					background-size: cover;
+					transition: all 0.3s ease 0s;
 				}
 			}
 		}
 	}
-	&__link {
-		text-transform: uppercase;
-		color: $color-text;
-		border-bottom: 1px solid rgba($color-orange, 0.5);
-		display: block;
-		padding: 12px 20px;
-		letter-spacing: 0.3px;
-		position: relative;
-		&:hover {
-			background-color: rgba($color-orange, 0.3);
-		}
-		&::after {
-			content: "";
-			position: absolute;
-			transition: all 0.3s ease 0s;
-			right: 10px;
-			width: 14px;
-			height: 14px;
-			top: calc(50% - 7px);
-			transform: rotate(90deg);
-			background: url(../img/icons/menu-arrow.svg) 0 0 no-repeat;
-			background-size: cover;
-			transition: all 0.3s ease 0s;
-		}
-	}
+
 	&__body {
 		display: none;
 		transition: all 0.3s ease 0s;
@@ -264,7 +264,7 @@
 }
 
 .items-submenu-catalog {
-	&__link {
+	& > li > a {
 		color: $color-text;
 		font-size: 14px;
 		line-height: 1.5;
