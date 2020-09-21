@@ -26,7 +26,47 @@ if (sliders) {
 	sliders_bild_callback();
 }
 function sliders_bild_callback(params) { }
-//SliderSale
+//SliderTop
+if (document.querySelector('.section-top__slider')) {
+	let sliderTop = new Swiper('.section-top__slider-body', {
+		// effect: 'fade',
+		// autoplay:{
+		// 	delay: 3000,
+		// 	disableOnInteraction:false,
+		// },
+		observer: true,
+		observerParents: true,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		// autoHeight: true,
+		speed: 800,
+		// touchRatio: 0,
+		// simulateTouch: false,
+		loop: true,
+		// preloadImages: true,
+		// lazy: true,
+		//Dots
+		pagination: {
+			el: '.section-top__dots',
+			clickable: true,
+		},
+		//Arrows
+		navigation: {
+			nextEl: '.section-top__arrows.section-top__arrow-next',
+			prevEl: '.section-top__arrows.section-top__arrow-prev',
+		},
+		// on:{
+		// 	lazyImageReady: function(){
+		// 		ibg();
+		// 	},
+		// },
+		//And if we need scrollbar
+		// scrollbar:{
+		// 	el:'.swiper-scrollbar',
+		// },
+	});
+
+};
 if (document.querySelector('.sale-slider__items')) {
 	let sliderSale = new Swiper('.sale-slider__body', {
 		// effect: 'fade',
