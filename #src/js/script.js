@@ -226,6 +226,18 @@ for (let index = 0; index < submenuParents.length; index++) {
 		e.preventDefault();
 	});
 };
+let vacancies = document.querySelectorAll('.list-vacancies__name');
+for (let index = 0; index < vacancies.length; index++) {
+	let vacancie = vacancies[index];
+	vacancie.addEventListener("click", function (e) {
+		for (let index = 0; index < vacancies.length; index++) {
+			let vacancie = vacancies[index];
+			vacancie.parentElement.classList.remove('_active');
+		}
+		vacancie.parentElement.classList.add('_active');
+		e.preventDefault();
+	});
+};
 
 let menuCatalogBurger = document.querySelector('.menu-catalog__burger');
 let menuCatalogBody = document.querySelector('.menu-catalog__body');
