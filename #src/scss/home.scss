@@ -1,24 +1,82 @@
 .section-top {
 	margin-top: 58px;
 
+<<<<<<< HEAD
 	&__img {
 		padding-bottom: 29.6%;
 		overflow: hidden;
 		background-position: center;
 		&:hover {
+=======
+	&__slider {
+		position: relative;
+	}
+
+	&__slider-body {
+		overflow: hidden;
+	}
+
+	&__slide {
+		flex: 0 0 100%;
+		min-width: 0;
+		padding: 0 0 50%;
+	}
+
+	&__dots {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 2;
+		display: flex;
+		.swiper-pagination-bullet {
+			width: 10px;
+			height: 10px;
+			border: 1px solid #000;
+			background-color: #000;
+			display: block;
+			margin: 0 5px;
+			border-radius: 50%;
 		}
-		@media (max-width: 800px) {
-			img {
-				display: none;
-			}
+		.swiper-pagination-bullet-active {
+			background-color: #fff;
+			border: 1px solid #fff;
 		}
+	}
+
+	&__arrows {
+		cursor: pointer;
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		line-height: 0;
+		width: 40px;
+		height: 40px;
+		svg {
+			width: 100%;
+			height: 100%;
+>>>>>>> 25cba7e9628c0c0970a24253eedb50155633f41c
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	&__arrow-next {
+		right: 0;
+		left: auto;
 	}
 }
 
 .products {
+<<<<<<< HEAD
 	margin-top: 90px;
+=======
+	padding: 120px 0;
+>>>>>>> 25cba7e9628c0c0970a24253eedb50155633f41c
 	@media (max-width: 991.98px) {
-		margin-top: 58px;
+		padding: 58px 0;
 	}
 	&__inner {
 		display: flex;

@@ -186,7 +186,7 @@ let _slideToggle = (target, duration = 500) => {
 
 
 if (window.innerWidth < 1101) {
-	let menuParents = document.querySelectorAll('.menu-catalog__parent>a');
+	let menuParents = document.querySelectorAll('.menu-catalog__list>li>a');
 	for (let index = 0; index < menuParents.length; index++) {
 		const menuParent = menuParents[index];
 		menuParent.addEventListener("click", function (e) {
@@ -199,7 +199,7 @@ if (window.innerWidth < 1101) {
 		});
 	}
 } else {
-	let menuParents = document.querySelectorAll('.menu-catalog__parent');
+	let menuParents = document.querySelectorAll('.menu-catalog__list>li');
 	for (let index = 0; index < menuParents.length; index++) {
 		const menuParent = menuParents[index];
 		menuParent.addEventListener("mouseenter", function (e) {
@@ -214,7 +214,7 @@ if (window.innerWidth < 1101) {
 }
 
 
-let submenuParents = document.querySelectorAll('.submenu-catalog__parent>a');
+let submenuParents = document.querySelectorAll('.submenu-catalog__menu>li>a');
 for (let index = 0; index < submenuParents.length; index++) {
 	let submenuParent = submenuParents[index];
 	submenuParent.addEventListener("click", function (e) {
@@ -223,6 +223,18 @@ for (let index = 0; index < submenuParents.length; index++) {
 			submenuParent.parentElement.classList.remove('_active');
 		}
 		submenuParent.parentElement.classList.add('_active');
+		e.preventDefault();
+	});
+};
+let vacancies = document.querySelectorAll('.list-vacancies__name');
+for (let index = 0; index < vacancies.length; index++) {
+	let vacancie = vacancies[index];
+	vacancie.addEventListener("click", function (e) {
+		for (let index = 0; index < vacancies.length; index++) {
+			let vacancie = vacancies[index];
+			vacancie.parentElement.classList.remove('_active');
+		}
+		vacancie.parentElement.classList.add('_active');
 		e.preventDefault();
 	});
 };

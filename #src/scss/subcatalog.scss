@@ -1,6 +1,9 @@
 //subcatalog
 .subcatalog {
-	padding: 20px 0 90px;
+	padding: 40px 0 90px;
+	@media (max-width: 991.98px) {
+		padding: 30px 0;
+	}
 	&__title {
 		text-align: center;
 		@include adaptiv-font(36, 28);
